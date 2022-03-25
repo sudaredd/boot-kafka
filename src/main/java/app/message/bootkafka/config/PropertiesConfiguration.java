@@ -11,20 +11,20 @@ import org.springframework.core.io.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-@Slf4j
-@Configuration
+//@Slf4j
+//@Configuration
 public class PropertiesConfiguration {
 
   @Bean
   public PropertySourcesPlaceholderConfigurer properties() {
     PropertySourcesPlaceholderConfigurer ppc = new PropertySourcesPlaceholderConfigurer();
 //    ppc.setIgnoreResourceNotFound(true);
-    final List<Resource> resources = new ArrayList<>();
-    resources.add(new ClassPathResource("bts.properties"));
-    resources.add(new ClassPathResource("bhats_ps.properties"));
-    resources.add(new FileSystemResource("/etc/myapp/overriding.properties"));
-
-    ppc.setLocations(resources.toArray(new Resource[] {}));
+//    final List<Resource> resources = new ArrayList<>();
+//    resources.add(new ClassPathResource("bts.properties"));
+//    resources.add(new ClassPathResource("bhats_ps.properties"));
+//    resources.add(new FileSystemResource("/etc/myapp/overriding.properties"));
+//
+//    ppc.setLocations(resources.toArray(new Resource[] {}));
     return ppc;
   }
 }
