@@ -22,6 +22,8 @@ public class PropertiesConfiguration {
     final List<Resource> resources = new ArrayList<>();
     resources.add(new ClassPathResource("bts.properties"));
     resources.add(new ClassPathResource("bhats_ps.properties"));
+    resources.add(new FileSystemResource("/etc/myapp/overriding.properties"));
+
     ppc.setLocations(resources.toArray(new Resource[] {}));
     return ppc;
   }
