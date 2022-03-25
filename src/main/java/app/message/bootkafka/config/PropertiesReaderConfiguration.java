@@ -3,6 +3,7 @@ package app.message.bootkafka.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
@@ -15,6 +16,7 @@ import java.util.Map;
   @PropertySource(value = "classpath:bhats_pskkk.properties", ignoreResourceNotFound = true),
   @PropertySource("classpath:bhats_ps.properties")
 })
+@ImportResource({ "classpath:beans1.xml", "classpath:beans2.xml" })
 public class PropertiesReaderConfiguration {
 
   @Value("${ps}")
